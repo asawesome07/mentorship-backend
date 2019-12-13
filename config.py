@@ -1,5 +1,8 @@
 from datetime import timedelta
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 class BaseConfig(object):
@@ -18,6 +21,8 @@ class BaseConfig(object):
     SECRET_KEY = os.getenv('SECRET_KEY', None)
     # if not SECRET_KEY:
     #     raise ValueError('You need to export SECRET_KEY set for Flask application')
+
+    print(SECRET_KEY)
 
     SECURITY_PASSWORD_SALT = os.getenv('SECURITY_PASSWORD_SALT')
 
