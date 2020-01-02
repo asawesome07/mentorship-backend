@@ -22,8 +22,7 @@ class BaseConfig(object):
     # if not SECRET_KEY:
     #     raise ValueError('You need to export SECRET_KEY set for Flask application')
 
-    print(SECRET_KEY)
-
+    
     SECURITY_PASSWORD_SALT = os.getenv('SECURITY_PASSWORD_SALT')
 
     BCRYPT_LOG_ROUNDS = 13
